@@ -1,0 +1,142 @@
+            <!--
+            Seção de Distribuidores 
+            <section id="distribuidores">
+                <h2 class="section-title">Distribuidores</h2>
+                <hr class="divider" />
+                <div class="distribuidores-content">
+                    <div class="marca">
+                        <a href="pagina/marca1.html">
+                            <img src="../assets/images/brands/ina.png" alt="Logo da Marca 1" />
+                            <p>INA</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca2.html">
+                            <img src="../assets/images/brands/koyo.png" alt="Logo da Marca 2" />
+                            <p>KOYO</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca3.html">
+                            <img src="../assets/images/brands/fag.png"
+                            alt = "Logo da Marca 3" />
+                            <p>FAG</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca4.html">
+                            <img src="../assets/images/brands/nsk.png"
+                            alt = "Logo da Marca 4" />
+                            <p>NSK</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca5.html">
+                            <img src="../assets/images/brands/timken.png" alt="Logo da Marca 5" />
+                            <p>TIMKEN</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca6.html">
+                            <img src="../assets/images/brands/ntn.png" alt="Logo da Marca 6" />
+                            <p>NTN</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca7.html">
+                            <img src="../assets/images/brands/snr.png"Logo da Marca 7" />
+                            <p>SNR</p>
+                        </a>
+                    </div>
+
+                    <div class="marca">
+                        <a href="pagina/marca8.html">
+                            <img src="../assets/images/brands/skf.png"
+                            alt="Logo da Marca 8" />
+                            <p>SKF</p>
+                        </a>
+                    </div>
+
+                </div>
+            </section> -->
+
+            <!-- Seção - Quem Somos Nós 
+            <section class="quem-somos">
+                <div class="quem-somos-box">
+                    <h2 class="section-title">Quem Somos Nós</h2>
+                    <hr class="divider-1" />
+                    <p class="quem-somos-text">
+                        Na AZ Rolamentos, nossa missão é fornecer produtos de qualidade e serviços excepcionais aos nossos clientes. Estamos comprometidos em superar as expectativas e construir relações duradouras.
+                    </p>
+                </div>
+                <div class="quem-somos-image">
+                    <img src="../assets/images/icons/logo.jpeg" alt="Logo Quem Somos" />
+                </div>
+            </section> -->
+
+
+
+
+SCRIPTS      --------------------------
+
+
+    <!-- Botão de Retorno ao Topo -->
+    <button class="back-to-top" onclick="scrollToTop()">
+        <img src="../assets/images/icons/chevron_up.png" alt="Seta para cima" />
+    </button>
+
+    <!-- Botão do WhatsApp -->
+    <button class="whatsapp-icon" onclick="window.open('https://api.whatsapp.com/send?phone=41991821816', '_blank')">
+        <img src="../assets/images/icons/whatsapp.png" alt="WhatsApp">
+    </button>
+
+
+
+css ________________________________
+
+/* Seção de Distribuidores */
+#distribuidores {
+    padding: 50px 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+#distribuidores .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #031629; /* Cor do texto */
+}
+
+.distribuidores-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.marca {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.marca img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.marca p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.marca a:hover img {
+    transform: scale(1.1);
+}

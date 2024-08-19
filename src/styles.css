@@ -1,0 +1,757 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: #031629; /* Cor do cabeçalho */
+    color: #fff;
+    padding: 1.5rem 10rem;
+}
+
+nav {
+    max-width: 1120px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    color: #FFF2E780;
+}
+
+.menu a {
+    color: #FFF2E780;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffd700; /* Cor de destaque ao passar o mouse */
+}
+
+.content-container {
+    max-width: 1000px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento interno do conteúdo */
+}
+
+.banner {
+    position: relative;
+    padding: 0; /* Remover padding para ocupar toda a tela */
+    color: #eee;
+    overflow: hidden; /* Garante que a imagem não exceda os limites do contêiner */
+}
+
+.banner-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh; /* Ocupa a altura total da tela */
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste se necessário */
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pode ser ajustado para um tamanho menor, se necessário */
+    height: 100%; /* Pode ser ajustado para um tamanho menor, se necessário */
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 80%; /* Ajuste para definir o tamanho desejado */
+    height: auto; /* Mantém a proporção da altura com base na largura */
+    object-fit: cover; /* Garante que a imagem cobre o contêiner sem distorção */
+    margin: auto; /* Centraliza a imagem dentro do contêiner */
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 0 200px; 
+    text-align: left; 
+    color: #FCCB02;
+    margin-left: 30px; 
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.banner-content h1 b {
+    color: #04305C;
+}
+
+.banner-content span {
+    color: #04305C;
+    font-weight: bold;
+}
+
+.theme-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #eee;
+    background-color: #04305C;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: #fff;
+    color: #04305C;
+}
+
+/* Seção de Próximos Eventos */
+#upcoming-events {
+    padding: 1rem 0;
+    background-color: #f4f4f4; /* Cor de fundo */
+  }
+  
+  #upcoming-events .container {
+    text-align: center;
+  }
+  
+  #upcoming-events .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    
+  }
+
+  
+#upcoming-events #upcoming-events-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+  
+#upcoming-events #upcoming-events-content .event {
+    text-align: center;
+    width: 450px;
+    background-color: #fff; /* Cor de fundo dos eventos */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin: 0 10px;
+}
+  
+#upcoming-events #upcoming-events-content .event img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para a imagem */
+}
+  
+#upcoming-events #upcoming-events-content .event h3 {
+    margin: 20px 0;
+    font-size: 22px;
+}
+  
+#upcoming-events #upcoming-events-content .event p {
+    color: #666; /* Cor do texto secundário */
+}
+  
+  #upcoming-events #upcoming-events-content .event a.btn {
+    display: inline-block;
+    background-color: #04305C; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+  }
+  
+#upcoming-events #upcoming-events-content .event a.btn:hover {
+    background-color: #555; /* Cor do botão ao passar o mouse */
+}
+
+
+
+
+/* Seção Localização */
+
+#localizacao {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    color: #212d31; /* Cor do texto */
+}
+
+#localizacao h2 {
+    font-size: 2rem;
+    color: #04305C; /* Cor do título */
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+.location-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+iframe {
+    flex: 1;
+    max-width: 60%;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hours {
+    flex: 1;
+    max-width: 35%; 
+    text-align: center; 
+    padding: 20px;
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hours h3 {
+    font-size: 1.5rem;
+    color: #04305C;
+    margin-bottom: 10px;
+}
+
+.hours p {
+    font-size: 1rem;
+    color: #212d31; 
+}
+
+/* Seção de Informações de Contato */
+#contact-info {
+    padding: 1rem 0;
+    background-color: #f4f4f4; 
+}
+
+#contact-info .container {
+    text-align: center;
+}
+
+#contact-info .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 60px;
+    border: 2px solid #04305C;
+    margin: 0 auto 30px;
+}
+
+#contact-info .contact-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#contact-info .contact-card {
+    width: 150px; 
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin: 0 10px 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#contact-info .contact-card:hover {
+    transform: scale(1.1);
+}
+
+#contact-info .contact-card img {
+    width: 65px;
+    height: 65px;
+}
+
+#contact-info .contact-card a {
+    color: #04305C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+}
+
+#contact-info .contact-card a:hover {
+    color: #555; 
+}
+
+
+/* Formulário de Contato */
+  
+.contain {
+    background-color: #f9f9f9;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+  
+div.form {
+    background-color: #f9f9f9;
+}
+
+.contact-wrapper {
+    margin: auto 0;
+}
+  
+.submit-btn {
+    float: left;
+}
+    
+.reset-btn {
+    float: right;
+}
+  
+.form-headline:after {
+    content: "";
+    display: block;
+    width: 10%;
+    padding-top: 10px;
+    border-bottom: 3px solid #031629;
+}
+  
+.highlight-text {
+    color: #031629;
+}
+  
+.hightlight-contact-info {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5;
+}
+  
+.highlight-text-grey {
+    font-weight: 500;
+}
+  
+.email-info {
+    margin-top: 20px;
+}
+  
+::-webkit-input-placeholder { /* Chrome */
+    font-family: 'Roboto', sans-serif;
+}
+  
+.required-input {
+    color: black;
+}
+
+@media (min-width: 600px) {
+    .contain {
+        padding: 0;
+    }
+}
+  
+
+  .form-input:focus,
+  textarea:focus{
+    outline: 1.5px solid #031629;
+  }
+  
+  .form-input,
+  textarea {
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+  }
+  
+  .wrapper > * {
+    padding: 1em;
+  }
+  @media (min-width: 700px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .wrapper > * {
+      padding: 2em 2em;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contacts {
+    color: #212d31;
+  }
+  
+  .form {
+    background: #fff;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  form label {
+    display: block;
+  }
+  form p {
+    margin: 0;
+  }
+  
+  .full-width {
+    grid-column: 1 / 3;
+  }
+  
+  button,
+  .submit-btn,
+  .form-input,
+  textarea {
+    padding: 1em;
+  }
+  
+  button, .submit-btn {
+    background: transparent;
+    border: 1px solid #031629;
+    color: #031629;
+    border-radius: 15px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+  }
+  button:hover, .submit-btn:hover,
+  button:focus , .submit-btn:focus{
+    background: #ec1c24;
+    outline: 0;
+    color: #eee;
+  }
+  .error {
+    color: #ec1c24;
+  }
+  
+
+/* Seção de Rodapé */
+.footer-section {
+    background-color: #020d18;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-cta {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.single-cta {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.single-cta:hover {
+    transform: scale(1.05);
+}
+
+.single-cta i {
+    font-size: 30px;
+    color: #f9b115;
+    margin-right: 20px;
+}
+
+.cta-text h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #f9b115;
+    font-weight: bold;
+}
+
+.cta-text span {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.footer-content {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-widget {
+    max-width: 300px;
+    margin: 0 10px;
+    flex: 1;
+    text-align: left;
+    margin-right: auto; 
+    margin-left: auto;
+}
+.footer-widget h3 {
+    font-size: 20px;
+    color: #f9b115;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-text {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-social-icon {
+    margin-top: 20px;
+}
+
+.footer-social-icon span {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f9b115;
+}
+
+.footer-social-icon a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.footer-social-icon a:hover {
+    color: #f9b115;
+    transform: scale(1.2);
+}
+
+.facebook-bg {
+    color: #3b5998;
+}
+
+.twitter-bg {
+    color: #1da1f2;
+}
+
+.google-plus-bg {
+    color: #db4437;
+}
+
+.instagram-bg {
+    color: #e4405f;
+}
+
+.whatsapp-bg {
+    color: #25d366;
+}
+
+.footer-widget ul {
+    list-style: none;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.footer-widget ul li {
+    margin-bottom: 10px;
+}
+
+.footer-widget ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-widget ul li a:hover {
+    color: #f9b115;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    width: 100%;
+    max-width: 100px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.subscribe-form input::placeholder {
+    color: hsl(0, 0%, 67%);
+}
+
+.subscribe-form button {
+    padding: 10px 10px;
+    border: none;
+    background-color: #f9b115;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #e0a105;
+}
+
+.footer-bottom-content {
+    background-color: #000313;
+    color: #888;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu ul li a:hover {
+    color: #f9b115;
+}
+
+/* Botões Laterais */
+/* whatsapp button*/
+.whatsapp-icon {
+    position: fixed;
+    bottom: 90px; /* Ajuste essa posição conforme necessário */
+    right: 20px; /* Ajuste essa posição conforme necessário */
+    background-color: #25D366;
+    border: none;
+    width: 60px; /* Ajuste essa dimensão conforme necessário */
+    height: 60px; /* Ajuste essa dimensão conforme necessário */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 30px; /* Ajuste essa dimensão conforme necessário */
+    height: 30px; /* Ajuste essa dimensão conforme necessário */
+    margin-bottom: 1px; /* Adiciona espaço inferior para mover a imagem para cima */
+}
+
+.whatsapp-icon:hover {
+    background-color: #1EBE54;
+}
+
+
+/* back to top */
+.back-to-top {
+    position: fixed; /* Mantém o elemento fixo na tela enquanto rola */
+    bottom: 20px; /* Distância da parte inferior da tela */
+    right: 20px; /* Distância da borda direita da tela */
+    width: 50px; /* Largura do quadrado */
+    height: 50px; /* Altura do quadrado */
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top img {       
+    width: 30px;
+    margin-top: -5px; 
+}
+
+.back-to-top:hover {
+    opacity: 0.7; 
+}
+
+
+
+/* Media queries para dispositivos */
+@media screen and (max-width: 768px) {
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .subscribe-form input {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-widget h3 {
+        font-size: 16px;
+    }
+    
+    .subscribe-form input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-widget ul {
+        text-align: center;
+    }
+}
+
+
