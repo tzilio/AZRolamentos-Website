@@ -17,37 +17,39 @@ ul {
     list-style: none;
 }
 
+
+/* Header */
 header {
     background-color: #031629; /* Cor do cabeçalho */
     color: #fff;
-    padding: 1.5rem 10rem;
+    padding: 2rem 12rem; /* Aumentei o padding */
 }
 
 nav {
     max-width: 1120px;
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2rem; /* Aumentei o tamanho da fonte */
     font-weight: 600;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 2rem; /* Aumentei o espaçamento entre os itens do menu */
     color: #FFF2E780;
 }
 
 .menu a {
     color: #FFF2E780;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.25rem; /* Aumentei o tamanho da fonte */
     transition: color 0.3s;
 }
 
@@ -58,82 +60,167 @@ nav {
 .content-container {
     max-width: 1000px; /* Largura máxima do conteúdo */
     margin: 0 auto; /* Centraliza o conteúdo */
-    padding: 20px; /* Espaçamento interno do conteúdo */
+    padding: 30px; /* Aumentei o espaçamento interno do conteúdo */
 }
 
+/* Responsividade para tamanhos menores */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 8rem;
+    }
+
+    .logo {
+        font-size: 1.75rem; /* Aumentei o tamanho da fonte para telas menores */
+    }
+
+    .menu a {
+        font-size: 1.15rem; /* Aumentei o tamanho da fonte para telas menores */
+    }
+
+    .content-container {
+        padding: 25px; /* Aumentei o espaçamento interno */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.2rem 4rem;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Aumentei o tamanho da fonte para telas ainda menores */
+    }
+
+    .menu a {
+        font-size: 0.8rem; /* Aumentei o tamanho da fonte para telas ainda menores */
+    }
+
+    .content-container {
+        padding: 1rem; /* Aumentei o espaçamento interno */
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 1.2rem 4rem;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Aumentei o tamanho da fonte para telas ainda menores */
+    }
+
+    .menu a {
+        font-size: 0.6rem; /* Aumentei o tamanho da fonte para telas ainda menores */
+    }
+
+    .content-container {
+        padding: 1rem; /* Aumentei o espaçamento interno */
+    }
+}
+
+/* Banner */
 .banner {
     position: relative;
-    padding: 0; /* Remover padding para ocupar toda a tela */
+    padding: 0;
     color: #eee;
-    overflow: hidden; /* Garante que a imagem não exceda os limites do contêiner */
+}
+
+.banner .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
 }
 
 .banner-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70vh; /* Ocupa a altura total da tela */
-    flex-wrap: wrap; /* Permite que o conteúdo se ajuste se necessário */
-}
-
-.banner-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Pode ser ajustado para um tamanho menor, se necessário */
-    height: 100%; /* Pode ser ajustado para um tamanho menor, se necessário */
-    overflow: hidden;
-}
-
-.banner-image img {
-    width: 80%; /* Ajuste para definir o tamanho desejado */
-    height: auto; /* Mantém a proporção da altura com base na largura */
-    object-fit: cover; /* Garante que a imagem cobre o contêiner sem distorção */
-    margin: auto; /* Centraliza a imagem dentro do contêiner */
-    display: block; /* Remove o espaço em branco abaixo da imagem */
+    position: relative;
 }
 
 .banner-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    padding: 0 200px; 
-    text-align: left; 
-    color: #FCCB02;
-    margin-left: 30px; 
+    position: absolute;
+    top: 55%; /* Ajuste a posição vertical para mais abaixo */
+    left: 45%; /* Ajuste a posição horizontal para mais à esquerda */
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 2;
 }
 
 .banner-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Diminua o tamanho da fonte */
     line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no texto para melhorar a legibilidade */
 }
 
 .banner-content h1 b {
-    color: #04305C;
+    font-weight: bold;
 }
 
-.banner-content span {
-    color: #04305C;
-    font-weight: bold;
+.banner-content h1 span {
+    color: #fff; /* Cor do texto destacado */
 }
 
 .theme-btn {
     display: inline-block;
-    padding: 15px 30px;
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #eee;
+    padding: 12px 25px;
     background-color: #04305C;
-    border-radius: 30px;
-    text-transform: uppercase;
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-shadow: none;
 }
 
 .theme-btn:hover {
-    background-color: #fff;
-    color: #04305C;
+    background-color: #555;
+    color: #fff;
 }
+
+/* Banner Image */
+.banner-image {
+    width: 100%;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner-content {
+        top: 65%; /* Ajuste para telas menores */
+        left: 25%; /* Centraliza novamente em telas menores */
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .theme-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner-content {
+        top: 65%; /* Ajuste para telas ainda menores */
+        left: 20%; /* Centraliza novamente em telas menores */
+    }
+
+    .banner-content h1 {
+        font-size:0.5rem;
+    }
+
+    .theme-btn {
+        padding: 8px 16px;
+        font-size: 0.5rem;
+    }
+}
+
 
 /* Seção de Próximos Eventos */
 #upcoming-events {
@@ -198,6 +285,19 @@ nav {
     background-color: #555; /* Cor do botão ao passar o mouse */
 }
 
+@media (max-width: 600px) {
+    #upcoming-events #upcoming-events-content {
+        flex-direction: column; /* Organiza os eventos em uma coluna */
+        align-items: center; /* Centraliza os eventos na coluna */
+    }
+
+    #upcoming-events #upcoming-events-content .event {
+        
+        width: 80%; /* Faz os eventos ocuparem 100% da largura da tela */
+        margin-bottom: 20px; /* Adiciona espaço entre os eventos */
+        padding: 25px;
+    }
+}
 
 
 
@@ -217,29 +317,15 @@ nav {
 }
 
 .location-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; 
-    gap: 20px; 
-    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center;
 }
 
-iframe {
-    flex: 1;
-    max-width: 60%;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+iframe, .hours {
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
-.hours {
-    flex: 1;
-    max-width: 35%; 
-    text-align: center; 
-    padding: 20px;
-    border-radius: 8px; 
-    background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
 
 .hours h3 {
     font-size: 1.5rem;
@@ -308,6 +394,38 @@ iframe {
 
 #contact-info .contact-card a:hover {
     color: #555; 
+}
+
+@media (max-width: 500px) {
+    #contact-info .contact-card {
+        width: 70px;
+        padding: 15px;
+    }
+
+    #contact-info .contact-card img {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    #contact-info .contact-card a {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 400px) {
+    #contact-info .contact-card {
+        width: 70px;
+        padding: 10px;
+    }
+
+    #contact-info .contact-card img {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    #contact-info .contact-card a {
+        font-size: 16px; 
+    }    
 }
 
 
@@ -480,7 +598,7 @@ div.form {
 .single-cta {
     display: flex;
     align-items: center;
-    max-width: 300px;
+    max-width: 250px;
     flex: 1;
     transition: transform 0.3s ease-in-out;
 }
@@ -519,7 +637,7 @@ div.form {
 }
 
 .footer-widget {
-    max-width: 300px;
+    max-width: 200px;
     margin: 0 10px;
     flex: 1;
     text-align: left;
@@ -540,49 +658,48 @@ div.form {
     margin-bottom: 20px;
 }
 
-.footer-social-icon {
-    margin-top: 20px;
+.social-media {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 10vh;
+    margin: 0; 
 }
 
-.footer-social-icon span {
-    display: block;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #f9b115;
+.footer-social-icon {
+    display: flex;
+    align-items: center;
 }
 
 .footer-social-icon a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s, transform 0.3s;
-    display: inline-block;
+    text-decoration: none;
+    margin-right: 30px;
 }
 
-.footer-social-icon a:hover {
-    color: #f9b115;
-    transform: scale(1.2);
+.footer-social-icon i {
+    font-size: 24px;
 }
 
 .facebook-bg {
     color: #3b5998;
 }
 
-.twitter-bg {
-    color: #1da1f2;
+.whatsapp-bg {
+    color: #25D366;
 }
 
-.google-plus-bg {
-    color: #db4437;
+.google-bg {
+    color: #dd4b39;
 }
 
 .instagram-bg {
     color: #e4405f;
 }
 
-.whatsapp-bg {
-    color: #25d366;
+.linkedin-bg {
+    color: #0077b5;
 }
+
 
 .footer-widget ul {
     list-style: none;
@@ -629,13 +746,14 @@ div.form {
 }
 
 .subscribe-form button {
-    padding: 10px 10px;
+    padding: 0px 0px;
     border: none;
     background-color: #f9b115;
     color: #fff;
     border-radius: 0 50px 50px 0;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    width: 45px;
 }
 
 .subscribe-form button:hover {
@@ -647,7 +765,11 @@ div.form {
     color: #888;
     padding: 20px 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 24px;
+}
+
+.subscribe-form button i {
+    font-size: 20px; /* Aumenta o tamanho do ícone */
 }
 
 .footer-menu ul {
@@ -668,6 +790,277 @@ div.form {
 .footer-menu ul li a:hover {
     color: #f9b115;
 }
+
+
+/* Responsividade para tamanhos de tela menores */
+@media (max-width: 1200px) {
+    .single-cta {
+        max-width: 250px;
+    }
+
+    .footer-widget {
+        max-width: 200px;
+    }
+    
+    .footer-widget h3 {
+        font-size: 18px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+
+    .single-cta i {
+        font-size: 28px;
+    }
+
+    .cta-text h4 {
+        font-size: 16px;
+    }
+
+    .cta-text span {
+        font-size: 14px;
+    }
+
+    .footer-social-icon a {
+        font-size: 22px;
+    }
+
+    .footer-widget ul {
+        font-size: 13px;
+    }
+
+    .footer-bottom-content {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .single-cta {
+        max-width: 200px;
+    }
+
+    .footer-widget {
+        max-width: 150px;
+    }
+
+    .footer-widget h3 {
+        font-size: 16px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+
+    .single-cta i {
+        font-size: 26px;
+    }
+
+    .cta-text h4 {
+        font-size: 14px;
+    }
+
+    .cta-text span {
+        font-size: 12px;
+    }
+
+    .footer-social-icon a {
+        font-size: 20px;
+    }
+
+    .footer-widget ul {
+        font-size: 12px;
+    }
+
+    .footer-bottom-content {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-cta {
+        max-width: 200px;
+    }
+
+    .footer-widget {
+        max-width: 150px;
+    }
+    
+    .footer-widget h3 {
+        font-size: 14px;
+    }
+
+    .footer-text {
+        font-size: 11px;
+    }
+
+    .single-cta i {
+        font-size: 24px;
+    }
+
+    .cta-text h4 {
+        font-size: 12px;
+    }
+
+    .cta-text span {
+        font-size: 10px;
+    }
+
+    .footer-social-icon a {
+        font-size: 18px;
+    }
+
+    .footer-widget ul {
+        font-size: 11px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        font-size: 12px;
+    }
+
+    .footer-social-icon i {
+        font-size: 20px; 
+    }
+
+    .footer-social-icon a {
+        margin-right: 20px;
+    }
+
+    .footer-bottom-content {
+        font-size: 12px;
+    }
+
+    .subscribe-form input {
+        max-width: 150px;
+        font-size: 10px; 
+    }
+
+    .subscribe-form button {
+        width: 40px; 
+    }
+
+    .subscribe-form button i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-cta {
+        max-width: 125px;
+    }
+
+    .footer-widget {
+        max-width: 100px;
+    }
+    
+    .footer-widget h3 {
+        font-size: 12px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+
+    .single-cta i {
+        font-size: 20px;
+    }
+
+    .cta-text h4 {
+        font-size: 10px;
+    }
+
+    .cta-text span {
+        font-size: 8px;
+    }
+
+    .footer-social-icon a {
+        font-size: 16px;
+    }
+
+    .footer-widget ul {
+        font-size: 10px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        font-size: 10px;
+    }
+
+    .footer-social-icon i {
+        font-size: 16px; /* Diminui ainda mais o tamanho da fonte em telas muito pequenas */
+    }
+
+    .footer-social-icon a {
+        margin-right: 15px; /* Reduz ainda mais o espaçamento entre os ícones */
+    }
+
+    .footer-bottom-content {
+        font-size: 11px;
+    }
+
+    .subscribe-form input {
+        max-width: 120px; /* Reduz ainda mais o tamanho do input */
+        font-size: 12px; /* Mantém a fonte menor */
+    }
+
+    .subscribe-form button {
+        width: 25px; /* Reduz ainda mais a largura do botão */
+    }
+
+    .subscribe-form button i {
+        font-size: 16px; /* Diminui o tamanho do ícone */
+    }
+}
+
+@media (max-width: 400px) {
+    .single-cta {
+        max-width: 100px;
+    }
+
+    .footer-widget {
+        max-width: 75px;
+    }
+    
+    .footer-widget h3 {
+        font-size: 12px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+
+    .single-cta i {
+        font-size: 20px;
+    }
+
+    .cta-text h4 {
+        font-size: 10px;
+    }
+
+    .cta-text span {
+        font-size: 8px;
+    }
+
+    .footer-social-icon a {
+        font-size: 16px;
+    }
+
+    .footer-widget ul {
+        font-size: 10px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        font-size: 10px;
+    }
+
+    .footer-bottom-content {
+        font-size: 10px;
+    }
+}
+
+
 
 /* Botões Laterais */
 /* whatsapp button*/
@@ -698,7 +1091,6 @@ div.form {
     background-color: #1EBE54;
 }
 
-
 /* back to top */
 .back-to-top {
     position: fixed; /* Mantém o elemento fixo na tela enquanto rola */
@@ -725,33 +1117,42 @@ div.form {
     opacity: 0.7; 
 }
 
-
-
-/* Media queries para dispositivos */
-@media screen and (max-width: 768px) {
-    .footer-menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .subscribe-form input {
-        max-width: 80%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .footer-widget h3 {
-        font-size: 16px;
-    }
-    
-    .subscribe-form input {
-        width: 100%;
-        max-width: none;
+/* Media Queries para ajuste progressivo */
+@media (max-width: 768px) {
+    .whatsapp-icon, .back-to-top {
+        width: 50px; /* Ajusta o tamanho para dispositivos móveis maiores */
+        height: 50px;
+        right: 15px;
     }
 
-    .footer-widget ul {
-        text-align: center;
+    .whatsapp-icon img, .back-to-top img {
+        width: 25px;
+        height: 25px;
     }
 }
 
+@media (max-width: 480px) {
+    .whatsapp-icon, .back-to-top {
+        width: 40px; /* Ajusta o tamanho para dispositivos móveis menores */
+        height: 40px;
+        right: 10px;
+    }
 
+    .whatsapp-icon img, .back-to-top img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .whatsapp-icon, .back-to-top {
+        width: 30px; /* Ajusta o tamanho para as menores telas */
+        height: 30px;
+        right: 5px;
+    }
+
+    .whatsapp-icon img, .back-to-top img {
+        width: 15px;
+        height: 15px;
+    }
+}
