@@ -290,7 +290,76 @@ nav {
     }
 }
 
+/* Seção de Distribuidores */
+#distribuidores {
+    padding: 20px 0;
+    text-align: center;
+}
 
+#distribuidores .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #031629;
+}
+
+.distribuidores-content {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.marca {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.marca a {
+    text-decoration: none;
+    color: #031629;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.marca:hover {
+    transform: translateY(-5px);
+    background-color: #e0e0e0;
+}
+
+.marca a:hover {
+    color: #007bff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .distribuidores-content {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .distribuidores-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .distribuidores-content {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+
+    .marca {
+        padding: 15px; /* Reduz o padding para telas pequenas */
+    }
+
+    .marca a {
+        font-size: 16px; /* Diminui o tamanho da fonte em telas pequenas */
+    }
+}
 
 /* Seção Localização */
 
@@ -992,9 +1061,8 @@ iframe, .hours {
 }
 
 
-
 /* Botões Laterais */
-/* whatsapp button*/
+/* Botão WhatsApp */
 .whatsapp-icon {
     position: fixed;
     bottom: 90px; /* Ajuste essa posição conforme necessário */
@@ -1012,17 +1080,16 @@ iframe, .hours {
     z-index: 1000;
 }
 
-.whatsapp-icon img {
-    width: 30px; /* Ajuste essa dimensão conforme necessário */
-    height: 30px; /* Ajuste essa dimensão conforme necessário */
-    margin-bottom: 1px; /* Adiciona espaço inferior para mover a imagem para cima */
+.whatsapp-icon i {
+    color: #ffffff;
+    font-size: 30px;
 }
 
 .whatsapp-icon:hover {
     background-color: #1EBE54;
 }
 
-/* back to top */
+/* Botão "Voltar ao Topo" */
 .back-to-top {
     position: fixed; /* Mantém o elemento fixo na tela enquanto rola */
     bottom: 20px; /* Distância da parte inferior da tela */
@@ -1039,9 +1106,9 @@ iframe, .hours {
     transition: background-color 0.3s ease;
 }
 
-.back-to-top img {       
-    width: 30px;
-    margin-top: -5px; 
+.back-to-top i {
+    color: #000000;
+    font-size: 30px;
 }
 
 .back-to-top:hover {
@@ -1056,9 +1123,8 @@ iframe, .hours {
         right: 15px;
     }
 
-    .whatsapp-icon img, .back-to-top img {
-        width: 25px;
-        height: 25px;
+    .whatsapp-icon i, .back-to-top i {
+        font-size: 25px;
     }
 }
 
@@ -1069,9 +1135,8 @@ iframe, .hours {
         right: 10px;
     }
 
-    .whatsapp-icon img, .back-to-top img {
-        width: 20px;
-        height: 20px;
+    .whatsapp-icon i, .back-to-top i {
+        font-size: 20px;
     }
 }
 
@@ -1082,8 +1147,25 @@ iframe, .hours {
         right: 5px;
     }
 
-    .whatsapp-icon img, .back-to-top img {
-        width: 15px;
-        height: 15px;
+    .whatsapp-icon i, .back-to-top i {
+        font-size: 15px;
     }
 }
+
+
+/* Animação do botão "Voltar ao Topo" */
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    50% { opacity: 1; transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.back-to-top {
+    animation: bounceIn 1s ease-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
