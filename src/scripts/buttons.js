@@ -1,6 +1,6 @@
 // Função para abrir o WhatsApp
 document.querySelector('.whatsapp-icon').addEventListener('click', function() {
-    window.open('https://wa.me/41991821816', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5541992292928&text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Pode%20me%20ajudar%3F', '_blank');
 });
 
 // Função para voltar ao topo da página com rolagem suave
