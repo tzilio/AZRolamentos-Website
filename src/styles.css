@@ -945,7 +945,7 @@ iframe, .hours {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 576px) {
     .single-cta {
         max-width: 125px;
     }
@@ -1009,11 +1009,11 @@ iframe, .hours {
     }
 
     .subscribe-form button i {
-        font-size: 12px; /* Diminui o tamanho do ícone */
+        font-size: 16px; /* Diminui o tamanho do ícone */
     }
 }
 
-@media (max-width: 30px) {
+@media (max-width: 400px) {
     .single-cta {
         max-width: 100px;
     }
