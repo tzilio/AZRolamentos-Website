@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AZ Rolamentos - Soluções especializadas em rolamentos automotivos e industriais. Saiba mais sobre nossos produtos e peça seu orçamento online. Curitiba-PR. Entregas para todo o Brasil.">
+
     <title>AZ Rolamentos</title>
+    
     <link rel="stylesheet" href="src/styles.css">
-    <link rel="icon" href="./assets/images/icons/logo.jpeg" type="image/png">
+    <link rel="icon" href="./assets/images/icons/logo.jpeg" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="./assets/images/icons/logo.jpeg">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -24,7 +29,7 @@
             <ul class="menu">
                 <li><a href="index.html">Início</a></li> <!-- Atualiza a página -->
                 <li><a href="#contact-info">Sobre</a></li> <!-- Leva para a seção de Contato -->
-                <li><a href="#formulario-contato">Produtos</a></li> <!-- Leva para a seção de Orçamento -->
+                <li><a href="#contact-info">Produtos</a></li> <!-- Leva para a seção de Orçamento -->
                 <li><a href="#contact-info">Contato</a></li> <!-- Leva para a seção de Contato -->
             </ul>
         </nav>
@@ -52,17 +57,14 @@
             <section id="upcoming-events">
                 <div class="container">
                     <h2 class="section-title">Conheça Nossos Rolamentos</h2>
-                    <hr class="divider" />
                     <div id="upcoming-events-content">
                         <div class="event">
-                            <img src="./assets/images/bearing-images/automotive_bearing_img.png" alt="Imagem de Rolamentos Automotivos" />
-                            <h3>Rolamentos Automotivos</h3>
+                            <img src="./assets/images/bearing-images/automotive_bearing_img.png" alt="Rolamentos automotivos da AZ Rolamentos">                            <h3>Rolamentos Automotivos</h3>
                             <p>Trabalhamos com a linha geral de rolamentos e retentores, são mais de 14.000 mil itens em estoque.</p>
                             <a href="#contact-info" class="btn">Saiba Mais</a>
                         </div>
                         <div class="event">
-                            <img src="./assets/images/bearing-images/bearing_01.jpg" alt="Imagem de Rolamentos Industriais" />
-                            <h3>Rolamentos Industriais</h3>
+                            <img src="./assets/images/bearing-images/bearing_01.jpg" alt="Rolamentos industriais da AZ Rolamentos">                            <h3>Rolamentos Industriais</h3>
                             <p>Na linha industrial a AZ trabalha com rolamentos de ar condicionado e rolamentos de bomba d água.</p>
                             <a href="#contact-info" class="btn">Saiba Mais</a>
                         </div>
@@ -189,7 +191,7 @@
                     <div class="footer-widget">
                         <h3>Sobre Nós</h3>
                         <div class="footer-text">
-                            <p>AZ Rolamentos, há mais de 10 anos no mercado, é referência em rolamentos especializados e de alta qualidade.</p>
+                            <p>AZ Rolamentos, há mais de 10 anos no mercado de Curitiba, é referência em rolamentos especializados e de alta qualidade.</p>
                         </div>
                     </div>
                     <div class="footer-widget">
@@ -254,5 +256,29 @@
 
     <script src ="src/scripts/buttons.js"></script>
     <script src = "src/scripts/form.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "AZ Rolamentos",
+          "description": "Especializados em rolamentos automotivos e industriais em Curitiba.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. João Negrão, 1701. Loja 3",
+            "addressLocality": "Curitiba",
+            "addressRegion": "PR",
+            "postalCode": "80045-280",
+            "addressCountry": "BR"
+          },
+          "telephone": "+55 41 3077-2929",
+          "openingHours": "Mo-Fr 08:00-18:00",
+          "sameAs": [
+            "https://www.instagram.com/azrolamentos",
+            "https://www.facebook.com/azrolamentos"
+          ]
+        }
+    </script>
+        
 </body>
 </html>
