@@ -1,5 +1,3 @@
-// form.js
-
 // Função para validar e enviar o formulário
 function checkValidations() {
     const name = document.getElementById('name').value.trim();
@@ -33,37 +31,29 @@ function checkValidations() {
     }
 
     if (valid) {
-        saveFormData(name, email, message);
+        sendEmail(name, email, message);
     }
 
     return valid;
 }
 
-// Função para salvar os dados do formulário em um arquivo
-function saveFormData(name, email, message) {
+// Função para enviar os dados do formulário por e-mail usando EmailJS
+function sendEmail(name, email, message) {
     const formData = {
-        name: name,
-        email: email,
+        from_name: name,
+        from_email: email,
         message: message,
     };
 
-    // Converte os dados para JSON
-    const jsonData = JSON.stringify(formData);
-
-    // Simula o salvamento em um arquivo
-    downloadFile('form_data.json', jsonData);
-}
-
-// Função para baixar o arquivo com os dados
-function downloadFile(filename, content) {
-    const element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
-    element.setAttribute('download', filename);
-
-    document.body.appendChild(element);
-    element.click();
-
-    document.body.removeChild(element);
+    emailjs.send('service_j8lf9xk', 'template_4y4vq88', formData)
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Mensagem enviada com sucesso!');
+        reset();
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert('O envio falhou, tente novamente.');
+    });
 }
 
 // Função de reset do formulário
@@ -71,5 +61,3 @@ function reset() {
     document.getElementById('submit-form').reset();
     document.querySelectorAll('small').forEach(small => small.textContent = '');
 }
-
-

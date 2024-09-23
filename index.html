@@ -35,7 +35,6 @@
         </nav>
     </header>
 
-
     <main>
         <!-- Banner -->
         <div class="banner">
@@ -133,21 +132,21 @@
                     <div class="wrapper">
                         <div class="form">
                             <h3 class="form-headline">Fale Conosco</h3>
-                            <form id="submit-form" action="">
+                            <form id="submit-form" onsubmit="return checkValidations();">
                                 <p>
-                                    <input id="name" class="form-input" type="text" placeholder="Nome*">
-                                    <small class="name-error"></small>
+                                    <input id="name" class="form-input" type="text" placeholder="Nome*" required>
+                                    <small class="name-error" style="color: red;"></small>
                                 </p>
                                 <p>
-                                    <input id="email" class="form-input" type="email" placeholder="Email*">
-                                    <small class="email-error"></small>
+                                    <input id="email" class="form-input" type="email" placeholder="Email*" required>
+                                    <small class="email-error" style="color: red;"></small>
                                 </p>
                                 <p class="full-width">
                                     <textarea minlength="1" id="message" cols="30" rows="7" placeholder="Mensagem*" required></textarea>
-                                    <small class="message-error"></small>
+                                    <small class="message-error" style="color: red;"></small>
                                 </p>
                                 <p class="full-width">
-                                    <input type="button" class="submit-btn" value="Enviar" onclick="checkValidations()">
+                                    <button type="submit" class="submit-btn">Enviar</button>
                                     <button type="reset" class="reset-btn" onclick="reset()">Limpar</button>
                                 </p>
                             </form>
@@ -155,6 +154,7 @@
                     </div>
                 </div>
             </section>
+
         </div>
     </main> 
     
@@ -256,6 +256,13 @@
 
     <script src ="src/scripts/buttons.js"></script>
     <script src = "src/scripts/form.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("service_j8lf9xk");
+        })();
+    </script>    
+
 
     <script type="application/ld+json">
         {
