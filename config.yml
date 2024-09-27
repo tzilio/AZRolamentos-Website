@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main  # BRANCH GIT
 
-media_folder: "assets/images" # DIRETORIO P IMAGENS
-public_folder: "/assets/images" # CAMINHA P IMAGENS
+media_folder: "../assets/images" # DIRETORIO P IMAGENS
+public_folder: "../assets/images" # CAMINHA P IMAGENS
 
 collections:
   - name: "pages"
