@@ -7,3 +7,7 @@
   to = "/index.html"
   status = 200
 
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "max-age=31536000"
